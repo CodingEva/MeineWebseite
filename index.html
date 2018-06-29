@@ -113,7 +113,7 @@ body {
 </style>
 </head>
 <body>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
 <div class="header">
   <img src="logo.png" width="180" height="180" style="float:left">
   <h1>Melontastische Fakten</h1>
@@ -151,12 +151,34 @@ body {
       <div class="fakeimg" style="height:100px;">Image</div>
       <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
     </div>
-    <div class="card">
+    <div id="popularposts" class="card">
       <h3>Popular Post</h3>
-      <div class="fakeimg"><p>Image</p></div>
-      <div class="fakeimg"><p>Image</p></div>
-      <div class="fakeimg"><p>Image</p></div>
-    </div>
+	  
+      <ul class="list">
+
+  <li>
+
+    <div class="image"><p>Image2</p></div>
+
+     </li>
+
+     <li>
+
+    <div class="image"><p>Image1</p></div>
+
+     </li>
+
+     <li>
+
+    <div class="image"><p>Image3</p></div>
+
+     </li>
+
+</ul>
+      <button class="sort" data-sort="image">
+	    Sortieren
+	  </button>
+	  </div>
     <div class="card">
       <h3>Follow Me</h3>
 	  <p>Instagram:<p>
@@ -169,7 +191,15 @@ body {
 
 <div class="footer">
   <h2>Footer</h2>
+  <script>
+var options = {
+ valueNames: [ 'image' ]
+};
+
+var userList = new List('popularposts', options);
+</script>
 </div>
 
+</body>
 </body>
 </html>
